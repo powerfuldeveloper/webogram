@@ -7,14 +7,28 @@ html {
   overflow: visible;
 }
 
+
+@font-face {
+  font-family: 'Iran';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/IRANSansWeb.woff2) format('woff2'), url(../fonts/IRANSansWeb.woff) format('woff'), url(../fonts/IRANSansWeb.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Iran';
+  font-style: normal;
+  font-weight: 600;
+  src: url(../fonts/IRANSansWeb_Bold.woff2) format('woff2'), url(../fonts/IRANSansWeb_Bold.woff) format('woff'), url(../fonts/IRANSansWeb_Bold.ttf) format('truetype');
+}
+
 body {
   color: #000;
   background: none;
-  font: 12px/18px 'Open Sans', "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, Verdana, sans-serif;
+  font: 12px/18px 'Iran', 'Open Sans', "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, Verdana, sans-serif;
   overflow: hidden;
 
   &.non_osx {
-    font: 13px/18px Tahoma, sans-serif, Arial, Helvetica;
+    font: 13px/18px Iran;
   }
 }
 
