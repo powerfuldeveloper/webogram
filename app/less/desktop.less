@@ -4,14 +4,14 @@
 
 .tg_head {
   &_split {
-    max-width: 1010px;
+    max-width: 1150px;
     margin: 0 auto;
     height: 48px;
     background: #5682a3;
   }
 
   &_logo_wrap {
-    float: left;
+    float: right;
     width: 31%;
   }
 
@@ -51,6 +51,7 @@
     font-size: 14px;
     line-height: 16px;
     vertical-align: top;
+    direction: rtl;
 
     &:hover,
     &:focus,
@@ -74,7 +75,7 @@
 
 .tg_head_logo_dropdown {
   .icon-hamburger-wrap {
-    margin: 0 40px 0 0;
+    margin: 0 0 0 40px;
     vertical-align: top;
   }
 
@@ -579,7 +580,7 @@
 
 .im_page_wrap {
   background: #fff;
-  max-width: 1010px;
+  max-width: 1150px;
   min-width: 300px;
   margin: 0 auto;
 
@@ -645,7 +646,7 @@ a.footer_link.active:active {
   margin-right: -7px;
 
   &_wrap {
-    float: left;
+    float: right;
     width: 31%;
     border-right: 2px solid #E9EBED;
     padding-bottom: 10px;
@@ -683,13 +684,13 @@ a.footer_link.active:active {
 
 .im_history {
   &_col_wrap {
-    float: left;
+    float: right;
     width: 69%;
   }
 
   &_scrollable_wrap {
     /* Hardware acceleration in Safari */
-    
+
     // Caused flickering and bluring in webkit
     // -webkit-transform: translateZ(0);
     // -webkit-perspective: 1000;
@@ -1135,7 +1136,7 @@ a.peer_select_modal_share_link {
   .im_message_text,
   .im_message_media,
   .im_message_sign {
-    margin-left: 52px;
+    margin-right: 52px;
   }
 }
 
@@ -1320,12 +1321,12 @@ a.im_panel_peer_photo .peer_initials {
   width: 18px;
   height: 23px;
   margin-right: 15px;
-  
+
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  
+
   position: relative;
 
   .im_record_supported & {
@@ -1334,7 +1335,7 @@ a.im_panel_peer_photo .peer_initials {
 }
 .im_record_bg {
   position: absolute;
-  margin: -10px 0 0 -16px; 
+  margin: -10px 0 0 -16px;
   padding: 13px 16px 13px 16px;
 
   width: 50px;
@@ -2004,11 +2005,13 @@ a.settings_modal_content_settings_wrap {
 }
 
 .im_message_body {
+  margin-top: 4px;
+
   .im_grouped_short &,
   .im_grouped &,
   .im_grouped_fwd &,
   .im_grouped_fwd_short & {
-    margin-left: 57px;
+    margin-right: 57px;
   }
 }
 
@@ -2068,7 +2071,7 @@ a.settings_modal_content_settings_wrap {
   }
 
   div&_photo {
-    margin-right: 15px;
+    margin-left: 15px;
 
     .peer_initials {
       line-height: 48px;
@@ -2383,4 +2386,20 @@ a.settings_modal_content_settings_wrap {
     height: 18px;
     margin: 23px 27px;
   }
+}
+
+[my-message-body="historyMessage"] {
+  background-color: #6490b1;
+  padding: 5px;
+  color: white;
+}
+
+.im_message_meta {
+  background-color: #6490b1;
+  margin-right: 57px;
+  padding:0 5px 5px;
+}
+
+.im_message_meta .im_message_date_text {
+  color: white;
 }

@@ -1393,7 +1393,7 @@ a.im_dialog_selected {
 .im_dialog_unread {
   background: #c1d6e5;
   display: inline-block;
-  float: right;
+  float: left;
   width: 8px;
   height: 8px;
   border-radius: 5px;
@@ -1412,7 +1412,7 @@ a.im_dialog_selected {
 
 .im_dialog_pinned {
   display: inline-block;
-  float: right;
+  float: left;
   width: 14px;
   height: 14px;
   overflow: hidden;
@@ -1454,6 +1454,8 @@ a.im_dialog_selected {
   text-overflow: ellipsis;
 }
 .im_dialog_message_wrap {
+  direction: rtl;
+  text-align: right;
   height: 44px;
   overflow: hidden;
 }
@@ -1566,6 +1568,7 @@ a.im_dialog_selected {
 .non_osx .im_message_author_wrap,
 .non_osx .im_message_fwd_author_wrap {
   font-size: 12px;
+  text-align: right;
 }
 .im_message_author_via {
   color: #3a6d99;
@@ -1576,7 +1579,7 @@ a.im_dialog_selected {
 }
 .im_message_author_admin {
   color: #adadad;
-  margin-left: 6px;
+  margin-right: 6px;
   font-size: 11px;
 }
 
@@ -1595,7 +1598,7 @@ a.im_dialog_selected {
 
 a.im_message_from_photo,
 a.im_message_contact_photo {
-  margin: 0 15px 0 0;
+  margin: 0 0 0 15px;
 }
 .non_osx .im_message_contact_name {
   font-size: 12px;
@@ -2216,7 +2219,7 @@ img.im_message_document_thumb {
 .im_message_fwd_date {
   color: #adadad;
   font-size: 0.85em;
-  padding: 0 0 20px 10px;
+  padding: 0 10px 20px 0;
 }
 
 .im_message_edited {
@@ -2234,6 +2237,7 @@ div.im_message_author,
 div.im_message_body {
   display: block;
   overflow: hidden;
+  direction: rtl;
 }
 
 // .im_message_meta,
@@ -2347,7 +2351,11 @@ div.im_message_body {
 }
 .im_message_reply_body {
   line-height: 16px;
+  margin: 0 10px 0 5px;
+  padding: 3px;
   overflow: hidden;
+  color: #ffeac1;
+  background: #6490b1;
   white-space: nowrap;
   text-overflow: ellipsis;
   margin-bottom: 1px;
@@ -3582,10 +3590,10 @@ li.inline_result_sticker.composer_autocomplete_option_active a {
   margin-right: 5px;
   vertical-align: baseline;
   display: inline-block;
-  animation: blinker 0.5s cubic-bezier(.5, 0, 1, 1) infinite alternate;  
+  animation: blinker 0.5s cubic-bezier(.5, 0, 1, 1) infinite alternate;
 }
 
-@keyframes blinker {  
+@keyframes blinker {
   from { opacity: 1; }
   to { opacity: 0; }
 }
@@ -3598,11 +3606,11 @@ li.inline_result_sticker.composer_autocomplete_option_active a {
   color: #3a6d99;
 
   transition: color linear 0.2s;
-  
+
   i {
     margin-right: 5px;
   }
-  
+
   .im_send_form_hover & {
     color: #CCC;
   }
@@ -4093,7 +4101,7 @@ ul.chat_modal_migrate_list {
 
 .modal-dialog {
   width: 100%;
-  
+
   .md_simple_modal_window &,
   .confirm_modal_window &,
   .error_modal_window & {

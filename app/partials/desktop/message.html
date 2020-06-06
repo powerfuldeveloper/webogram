@@ -30,19 +30,7 @@
       </a>
       <i ng-if="::historyMessage.pFlags.unread &amp;&amp; historyMessage.pFlags.out || historyMessage.pending || false" class="icon-message-status" ng-show="!historyMessage.error"></i>
 
-      <a class="im_message_from_photo pull-left" my-peer-photolink="::historyMessage.fromID" img-class="im_message_from_photo"></a>
-
-      <div class="im_message_meta pull-right text-right noselect">
-        <div class="im_message_views_wrap" ng-if="::!historyMessage.fwdFromID && historyMessage.views > 0">
-          <div class="im_message_views">
-            <i class="icon-message-views"></i><span class="im_message_views_cnt" my-message-views="historyMessage.mid"></span>
-          </div>
-        </div>
-        <span class="im_message_date clickable">
-          <span class="im_message_edited" my-message-edited="historyMessage.mid"></span>
-          <span class="im_message_date_text nocopy" data-content="{{::historyMessage.date | time}}"></span>
-        </span>
-      </div>
+      <a class="im_message_from_photo pull-right" my-peer-photolink="::historyMessage.fromID" img-class="im_message_from_photo"></a>
 
       <div class="im_message_body" ng-class="::{im_message_body_media: historyMessage._ == 'message' &amp;&amp; historyMessage.media ? true : false}">
 
@@ -72,6 +60,18 @@
         </div>
 
 
+      </div>
+
+      <div class="im_message_meta text-left noselect">
+        <div class="im_message_views_wrap" ng-if="::!historyMessage.fwdFromID && historyMessage.views > 0">
+          <div class="im_message_views">
+            <i class="icon-message-views"></i><span class="im_message_views_cnt" my-message-views="historyMessage.mid"></span>
+          </div>
+        </div>
+        <span class="im_message_date clickable">
+          <span class="im_message_edited" my-message-edited="historyMessage.mid"></span>
+          <span class="im_message_date_text nocopy" data-content="{{::historyMessage.date | time}}"></span>
+        </span>
       </div>
 
     </div>
