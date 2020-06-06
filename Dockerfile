@@ -2,7 +2,7 @@ FROM node AS build
 ADD . /usr/src/app
 WORKDIR /usr/src/app
 RUN npm install -g gulp && npm install && npm run build
-RUN cp app/fonts/ dist/
+RUN cp -r app/fonts/ dist/
 
 
 FROM nginx:1.17.1-alpine
